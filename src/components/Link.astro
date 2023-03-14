@@ -1,0 +1,18 @@
+---
+interface Props {
+    name: string;
+    link: string;
+}
+
+const props = Astro.props;
+---
+
+<a
+    class="group mr-10 underline-offset-4 hover:scale-105 hover:text-primary transition-all font-bold"
+    href={props.link}
+>
+    {props.name}
+    <span
+        class="block max-w-0 group-hover:max-w-full transition-all duration-200 h-0.5 bg-primary"
+    ></span>
+</a>

@@ -1,7 +1,38 @@
 ---
 import Base from "../layouts/base.astro";
+import Button from "../components/Button.astro";
 ---
 
 <Base>
-    <h1>Home</h1>
+    <section
+        class="h-fit flex flex-grow flex-col min-h-screen relative justify-center"
+        id="Hero"
+    >
+        <div class="ml-10 w-1/2 flex flex-col gap-y-5">
+            <h1 class="font-black text-3xl text-primary">
+                HEADING 1 Lorem, ipsum dolor sit amet consectetur adipisicing
+                elit. Quisquam, quod.
+            </h1>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Architecto, ut tempora perspiciatis autem molestiae aut nesciunt
+                assumenda velit? Eligendi, hic cum. Error molestias sequi
+                deserunt, ipsam esse necessitatibus ex doloribus iure nesciunt?
+                Ab ratione assumenda dolorem deserunt cumque numquam velit
+                explicabo soluta magnam dolorum! Similique qui fuga pariatur
+                nisi ipsum!
+            </p>
+            <Button link="#Contact" name="Get In Contact" />
+        </div>
+    </section>
 </Base>
+
+<section class="h-fit flex flex-grow flex-col min-h-screen" id="About">
+    <!-- About Section -->
+</section>
+<section class="h-fit flex flex-grow flex-col" id="Clients">
+    <!-- Our Clients -->
+</section>
+<section class="h-fit flex flex-grow flex-col" id="Contact">
+    <!-- Contact Us -->
+</section>

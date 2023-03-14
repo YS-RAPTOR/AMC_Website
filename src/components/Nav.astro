@@ -1,0 +1,35 @@
+---
+import Link from "./Link.astro";
+
+const navItems = [
+    {
+        name: "HOME",
+        link: "#Hero",
+    },
+    {
+        name: "ABOUT US",
+        link: "#About",
+    },
+    {
+        name: "OUR CLIENTS",
+        link: "#Clients",
+    },
+    {
+        name: "CONTACT US",
+        link: "#Contact",
+    },
+];
+---
+
+<div
+    class="flex flex-grow w-full backdrop-blur-3xl h-16 items-center justify-between fixed"
+>
+    <div class="h-8 w-8 bg-white ml-4"></div>
+    <nav class="flex">
+        {
+            navItems.map((item, _) => {
+                return <Link name={item.name} link={item.link} />;
+            })
+        }
+    </nav>
+</div>
