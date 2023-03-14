@@ -1,0 +1,19 @@
+Landing Page
+ - Hero Section
+ - About Us
+ - Our Clients
+	- Logos list
+ - Contact Us
+	- Form with information
+
+Australian Marketing Consultants Pvt LTD is an organically grown and privately owned Australian company
+ specialising in business & marketing strategy striving to be the masters of our field.
+
+AMC will partner with you to translate your business goals and objectives into real growth and success.
+ Our agency's philosophy is simple. We want to understand your business, your goals, your customers, and your audience as well as you do.
+
+Driven by data and fuelled by passion, our commitment is to become an integral part of your business and a trusted and valued partner.
+ Our outcome-based marketing strategy results in the right channels and approach for your business.
+
+Our team comprises industry experts with decades of multinational exposure and experience, and we are committed to delivering transformative
+business performance and management for our clients and partners.
