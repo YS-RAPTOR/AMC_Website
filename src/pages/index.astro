@@ -1,14 +1,16 @@
 ---
 import Base from "../layouts/base.astro";
 import Button from "../components/Button.astro";
+
+const clients = [1, 2, 3, 4, 5, 6, 7, 8];
 ---
 
 <Base>
     <section
-        class="h-fit flex flex-grow flex-col min-h-screen relative justify-center"
+        class="h-fit flex flex-grow flex-col justify-center min-h-screen lg:pt-16 bg-slate-500 scroll-mt-16"
         id="Hero"
     >
-        <div class="ml-10 w-1/2 flex flex-col gap-y-5">
+        <div class="ml-10 pb-10 w-4/5 sm:w-1/2 flex flex-col gap-y-5">
             <h1 class="font-black text-3xl text-primary">
                 HEADING 1 Lorem, ipsum dolor sit amet consectetur adipisicing
                 elit. Quisquam, quod.
@@ -22,17 +24,147 @@ import Button from "../components/Button.astro";
                 explicabo soluta magnam dolorum! Similique qui fuga pariatur
                 nisi ipsum!
             </p>
-            <Button link="#Contact" name="Get In Contact" />
+            <div class="text-xl mt-2">
+                <Button link="#Contact" name="Get In Contact" />
+            </div>
+        </div>
+    </section>
+
+    <section
+        class="h-fit flex flex-grow flex-col items-center scroll-mt-16"
+        id="About"
+    >
+        <div class="w-1/2 text-center">
+            <h1 class="font-black text-3xl my-3 text-primary">ABOUT US</h1>
+            <p>
+                Australian Marketing Consultants Pvt LTD is an organically grown
+                and privately owned Australian company specialising in business
+                & marketing strategy striving to be the masters of our field.
+            </p>
+            <p>
+                AMC will partner with you to translate your business goals and
+                objectives into real growth and success. Our agency's philosophy
+                is simple. We want to understand your business, your goals, your
+                customers, and your audience as well as you do.
+            </p>
+            <p>
+                Driven by data and fuelled by passion, our commitment is to
+                become an integral part of your business and a trusted and
+                valued partner. Our outcome-based marketing strategy results in
+                the right channels and approach for your business.
+            </p>
+            <p>
+                Our team comprises industry experts with decades of
+                multinational exposure and experience, and we are committed to
+                delivering transformative business performance and management
+                for our clients and partners.
+            </p>
+            <div class="my-10 text-xl">
+                <Button link="#Contact" name="Contact Us" />
+            </div>
+        </div>
+    </section>
+    <section
+        class="h-fit flex flex-grow flex-col items-center scroll-mt-16"
+        id="Clients"
+    >
+        <div class="w-4/5 text-center">
+            <h1 class="font-black text-3xl my-3 text-primary">OUR CLIENTS</h1>
+            <div
+                class="flex gap-3 flex-grow flex-wrap justify-center flex-shrink w-full h-fit"
+            >
+                {
+                    clients.map((client) => {
+                        return (
+                            <img
+                                src={`https://picsum.photos/seed/${client}/200/200`}
+                                alt="Client"
+                                class=" rounded-md"
+                            />
+                        );
+                    })
+                }
+            </div>
+        </div>
+    </section>
+    <section
+        class="h-fit flex flex-grow flex-col my-10 scroll-mt-16"
+        id="Contact"
+    >
+        <!-- Contact Form -->
+        <div class="flex flex-grow flex-col justify-center">
+            <div class="flex flex-col md:flex-row items-start">
+                <div
+                    class="w-4/5 sm:w-1/2 text-center md:text-left md:ml-10 md:pr-10"
+                >
+                    <h1 class="font-black text-3xl my-3 text-primary">
+                        CONTACT US
+                    </h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Aliquid culpa porro aperiam a officia dolorum tenetur
+                        non, reiciendis possimus in impedit ab, illo minima
+                        nemo, accusamus dicta reprehenderit hic quod eos alias
+                        neque debitis! Veniam nihil ullam quas dolores quo hic
+                        deserunt ea aperiam accusamus, obcaecati magni omnis
+                        beatae quaerat!
+                    </p>
+                </div>
+                <form class="w-4/5 sm:w-1/2 md:mr-10 mt-10 md:mt-0">
+                    <div class="flex flex-col gap-y-3">
+                        <div class="flex flex-col">
+                            <label
+                                class="text-sm text-gray-700 font-medium"
+                                for="name">Name:</label
+                            >
+                            <input
+                                type="text"
+                                name="name"
+                                id="name"
+                                placeholder="Your Name"
+                                required
+                                class="border-gray-300 rounded-lg shadow-sm focus:ring-primary focus:border-primary"
+                            />
+                        </div>
+                        <div class="flex flex-col">
+                            <label
+                                class="text-sm text-gray-700 font-medium"
+                                for="email">Email:</label
+                            >
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                placeholder="Your Email"
+                                required
+                                class="border-gray-300 rounded-lg shadow-sm focus:ring-primary focus:border-primary"
+                            />
+                        </div>
+                        <div class="flex flex-col">
+                            <label
+                                class="text-sm text-gray-700 font-medium"
+                                for="message">Message:</label
+                            >
+                            <textarea
+                                name="message"
+                                id="message"
+                                cols="30"
+                                rows="10"
+                                required
+                                class="border-gray-300 rounded-lg shadow-sm focus:ring-primary focus:border-primary"
+                                placeholder="Your Message"></textarea>
+                        </div>
+                        <div>
+                            <button
+                                type="submit"
+                                class="py-2 px-4 rounded-lg w-full text-center font-bold border-2 border-comp4 text-comp4 hover:text-background hover:bg-primary transition-all duration-300"
+                            >
+                                Submit
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
 </Base>
-
-<section class="h-fit flex flex-grow flex-col min-h-screen" id="About">
-    <!-- About Section -->
-</section>
-<section class="h-fit flex flex-grow flex-col" id="Clients">
-    <!-- Our Clients -->
-</section>
-<section class="h-fit flex flex-grow flex-col" id="Contact">
-    <!-- Contact Us -->
-</section>

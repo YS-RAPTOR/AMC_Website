@@ -11,7 +11,10 @@ module.exports = {
                 comp4: "#FA0D8E",
                 background: "#e9e9e9",
             },
+            screens: {
+                xs: "400px",
+            },
         },
     },
-    plugins: [],
+    plugins: [require("@tailwindcss/forms")],
 };
